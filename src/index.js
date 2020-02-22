@@ -22,17 +22,6 @@ module.exports = function toReadable (num) {
     8:'eighty',
     9:'ninety',
   };
-  /*const tener={
-    11:'eleven',
-    12:'twelve',
-    13:'thirteen',
-    14:'fourteen',
-    15:'fifteen',
-    16:'sixteen',
-    17:'seventeen',
-    18:'eighteen',
-    19:'nineteen'
-  };*/
   const numerals={
     0:'', //добавляет пробел в конец строки!!
     1:'one',
@@ -59,7 +48,6 @@ module.exports = function toReadable (num) {
   let numToArray = num.toString().split('');
   let numToString = num.toString();
   let dozen = numToString.slice(1);
-  //let numeral = numToString(0);
   if (num === 0) {
     name = 'zero';
   }else if(numToString.length ===3) {
@@ -79,6 +67,6 @@ module.exports = function toReadable (num) {
   }
 
   name=name.trim();
-  
+
   return name;
 }
